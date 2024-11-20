@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testwithmaven-deployment
+spec:
+  replicas: 1 # Number of replicas (Pods) to run
+  selector:
+    matchLabels:
+      app: testwithmaven
+  template:
+    metadata:
+      labels:
+        app: testwithmaven
+    spec:
+      containers:
+        - name: testwithmaven
+          image: deepika135/testwithmaven:latest
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
