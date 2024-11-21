@@ -7,6 +7,6 @@ spec:
     app: testwithmaven
   ports:
     - protocol: TCP
-      port: 80  # Expose your service on port 80
-      targetPort: 8080  # Your container listens on port 8080
-  type: LoadBalancer  # Exposes the service to external traffic if using cloud
+      port: 80 
+      targetPort: 8080   
+  type: NodePort 
