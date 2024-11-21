@@ -50,7 +50,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>com.example.MainClass</mainClass>
+                        <mainClass>com.cdac.TestDemoClass</mainClass>
                     </manifest>
                 </archive>
             </configuration>
