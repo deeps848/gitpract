@@ -1,3 +1,4 @@
-FROM openjdk:17
-COPY target/testwithmaven-1.0.jar /testwithmaven.jar
-ENTRYPOINT ["sh", "-c", "java -jar /testwithmaven.jar && sleep infinity"]
+FROM openjdk:17-jdk-alpine
+WORKDIR /testwithmaven
+COPY target/testwithmaven-1.0.jar /testwithmaven/testwithmaven.jar
+ENTRYPOINT [ "java -jar /testwithmaven/testwithmaven.jar --server.port=8081 && tail -f /dev/null"]
