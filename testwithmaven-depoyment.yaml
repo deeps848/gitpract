@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: testwithmaven-deployment
 spec:
-  replicas: 1  # Number of replicas (Pods) to run
+  replicas: 1  
   selector:
     matchLabels:
       app: testwithmaven
